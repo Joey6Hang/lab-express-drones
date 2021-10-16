@@ -1,1 +1,16 @@
-<h2>Update the drone</h2>
+<form method="post" action="/drones/update/{{drones._id}}" class="form">
+   <h2>Update the drone</h2>
+<label class="label">name</label>
+<input type="text" class="input" name="name" value="{{drones.name}}">
+<label class="label">propellers</label>
+<input type="text" class="input" name="propellers" value="{{drones.propellers}}">
+<label class="label">maxSpeed</label>
+<input type="text" class="input" name="maxSpeed" value="{{drones.maxSpeed}}">
+
+  <label class="label">side</label>
+  <select class="input" name="side">
+    <option value="heroes">heroes</option>
+    <option value="villains" selected>villains</option>
+  </select>
+  <button class="button">update</button>
+</form>
